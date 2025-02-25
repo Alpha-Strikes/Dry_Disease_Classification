@@ -9,6 +9,8 @@ model = joblib.load("decision_tree_model.pkl")
 scaler = joblib.load("scaler.pkl")
 feature_names = ['Gender', 'Age', 'Sleep duration', 'Sleep quality', 'Sleep disorder', 'Wake up during night', 'Feel sleepy during day', 'Caffeine consumption', 'Alcohol consumption', 'Smoking', 'Medical issue', 'Ongoing medication', 'Smart device before bed', 'Average screen time', 'Blue-light filter', 'Discomfort Eye-strain', 'Redness in eye', 'Itchiness/Irritation in eye']
 
+st.title("Dry Eye Disease Prediction")
+
 x1 = st.number_input("Enter Gender (Male -> 0 | Female -> 1):", min_value=0, max_value=1, value=None, step=1)
 x2 = st.number_input("Enter Age:", min_value=0, max_value=130, value=None, step=1)
 x3 = st.number_input("How long do you sleep? (in hours):", min_value=0, max_value=24, value=None, step=1)
